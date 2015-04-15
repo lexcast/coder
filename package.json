@@ -1,0 +1,11 @@
+{
+    "main": "index.html",
+    "name": "coder",
+    "description": "Widget app to quick access your projects",
+    "version": "0.1",
+    "keywords": [ "widget", "project", "management" ],
+    "window": {
+        "title": "Coder",
+        "toolbar": true
+      }
+}
