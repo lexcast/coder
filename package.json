@@ -6,6 +6,13 @@
     "keywords": [ "widget", "project", "management" ],
     "window": {
         "title": "Coder",
-        "toolbar": true
+        "toolbar": false,
+        "frame": false,
+        "width": 200,
+        "height": 180,
+        "position": "center",
+        "resizable": false,
+        "show_in_taskbar": false,
+        "transparent": true
       }
 }

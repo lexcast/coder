@@ -1,0 +1,43 @@
+body {
+    background-color: rgba(0,0,0,0);
+    font-family: ubuntu, arial;
+    margin: 0;
+}
+h2 {
+    color: #FFF;
+}
+header {
+    background-color: rgba(18, 18, 15, 0.85);
+    color: #57d4e0;
+    padding: 5px;
+    text-align: center;
+    -webkit-border-radius: 5px 5px 0 0;
+    -webkit-app-region: drag;
+}
+.stats-container {
+    float: left;
+    width: 85%;
+    height: 100%;
+    background-color: rgba(18, 18, 15, 0.85);
+}
+#show-projects {
+    float: right;
+    width: 15%;
+    height: 100%;
+    color: #FFF;
+    background-color: rgba(18, 18, 15, 0.85);
+}
+#show-projects:hover {
+    background-color: rgba(18, 18, 15, 0.85);
+}
+#show-projects.selected {
+    background-color: rgba(11, 151, 156, 0.85);
+}
+#show-projects span {
+    margin-top: 40px;
+}
+.main {
+    height: 150px;
+    -webkit-border-radius: 0 0 5px 5px;
+    overflow: wrap;
+}
