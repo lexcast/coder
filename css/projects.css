@@ -1,0 +1,37 @@
+body {
+    background-color: rgba(0,0,0,0);
+    font-family: ubuntu, arial;
+    margin: 0;
+}
+.btn {
+    background-color: rgba(25, 24, 23, 0.85);
+    color: #FFF;
+    width: 50px;
+    padding:5px;
+    -webkit-border-radius: 3px;
+    visibility: hidden;
+    cursor: default;
+}
+.main:hover .btn {
+    visibility: visible;
+}
+#projects-container {
+    padding-top:15px;
+}
+.project-container {
+    padding: 15px;
+    float: left;
+    -webkit-border-radius: 3px;
+}
+.project-container:hover {
+    background-color: rgba(25, 24, 23, 0.5);
+}
+.project-info img {
+    max-width: 80px;
+    max-height: 80px;
+}
+.project-info h2 {
+    color: #FFF;
+    font-size: 13px;
+    text-align: center;
+}
