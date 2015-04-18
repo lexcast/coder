@@ -26,13 +26,20 @@
     <script src="../js/storedb.js"></script>
     <script>
         var projects = storedb('projects').find();
+        var container = $("#projects-container");
         if(projects) {
-            var container = $("#projects-container");
+            win.width = projects.length > 3 ? 180*3 : projects.length * 180;
+            win.height = (150 + Math.floor((projects.length-1)/3)) * 150;
             projects.forEach(function(project) {
                 container.append('<div class="project-container" id="'+project.name+'">'
                 + '<div class="project-info"><img src="'+project.icon+'"><h2>'+project.name+'</h2></div>'
                 + '<div class="project-options"></div></div>');
             });
+        } else {
+            win.width = 180;
+            win.height = 130;
+            container.toggleClass("empty");
+            container.append("<p>no projects</p>");
         }
         $("#add-project").on('click', function() {
             if(!win_add) {
@@ -43,7 +50,9 @@
                     position: "center",
                     transparent: true,
                     width: 200,
-                    height: 220
+                    height: 220,
+                    focus: true,
+                    resizable: false
                 });
                 win_add.on('add', function() {
                     win.reload();
