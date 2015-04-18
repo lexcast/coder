@@ -14,7 +14,7 @@
   <body>
       <header>New project</header>
       <div class="project-form">
-          <form id="form">
+          <form id="form" autocomplete="off">
               <input type="text" id="name" required>
               <label>Folder location</label>
               <input type="file" id="location" webkitdirectory required>
@@ -30,7 +30,7 @@
         $("#add").on('click', function() {
             if($("#form")[0].checkValidity()) {
                 storedb('projects').find({"name":$("#name").val()}, function(err, result) {
-                    if(!err && result.length == 0) {
+                    if((err == 'collection not exist') || (!err && result.length == 0)) {
                         storedb('projects').insert(
                             {"name":$("#name").val(),"location":$("#location").val(),"icon":$("#icon").val()},
                             function(err,result){
