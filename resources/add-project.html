@@ -4,19 +4,21 @@
   <head>
     <title>Add new project</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/add-project.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
     <script>
         var gui = require('nw.gui');
         var win = gui.Window.get();
-        // win.showDevTools();
+        win.showDevTools();
     </script>
   </head>
   <body>
-      <header>Add new project</header>
+      <header>New project</header>
       <div class="project-form">
           <form id="form">
               <input type="text" id="name" required>
+              <label>Folder location</label>
               <input type="file" id="location" webkitdirectory required>
+                </br><label>Icon</label> </br>
               <input type="file" id="icon" required>
               <input type="submit" value="Add" id="add">
               <input type="submit" formnovalidate value="Cancel" id="cancel">
