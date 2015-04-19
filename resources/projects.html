@@ -28,19 +28,21 @@
         var projects = storedb('projects').find();
         var container = $("#projects-container");
         if(projects) {
-            win.width = projects.length > 3 ? 180*3 : projects.length * 180;
-            win.height = (150 + Math.floor((projects.length-1)/3)) * 150;
+            win.resizeTo(
+                ((projects.length > 3) ? 180*3 : projects.length * 180),
+                (200 + Math.floor((projects.length-1)/3) * 160)
+            );
             projects.forEach(function(project) {
                 container.append('<div class="project-container" id="'+project.name+'">'
                 + '<div class="project-info"><img src="'+project.icon+'"><h2>'+project.name+'</h2></div>'
                 + '<div class="project-options"></div></div>');
             });
         } else {
-            win.width = 180;
-            win.height = 130;
+            win.resizeTo(180, 130);
             container.toggleClass("empty");
             container.append("<p>no projects</p>");
         }
+        win.show();
         $("#add-project").on('click', function() {
             if(!win_add) {
                 win_add = gui.Window.open('add-project.html',
