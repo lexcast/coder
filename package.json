@@ -8,6 +8,10 @@
     "project",
     "management"
   ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/lexcast/coder.git"
+  },
   "window": {
     "title": "Coder",
     "toolbar": false,
@@ -22,6 +26,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-bower": "^0.18.0"
+    "grunt-bower": "^0.18.0",
+    "grunt-node-webkit-builder": "^1.0.2"
   }
 }
