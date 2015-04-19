@@ -5,11 +5,6 @@
     <title>Add new project</title>
     <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../css/form.css">
-    <script>
-        var gui = require('nw.gui');
-        var win = gui.Window.get();
-        // win.showDevTools();
-    </script>
   </head>
   <body>
       <header>New project</header>
@@ -26,29 +21,6 @@
       </div>
     <script src="../vendor/jquery/dist/jquery.js"></script>
     <script src="../vendor/storedb/storedb.js"></script>
-    <script>
-        $("#add").on('click', function() {
-            if($("#form")[0].checkValidity()) {
-                storedb('projects').find({"name":$("#name").val()}, function(err, result) {
-                    if((err == 'collection not exist') || (!err && result.length == 0)) {
-                        storedb('projects').insert(
-                            {"name":$("#name").val(),"location":$("#location").val(),"icon":$("#icon").val()},
-                            function(err,result){
-                                if(!err) {
-                                    win.hide();
-                                    win.emit('add');
-                                } else alert('there was an error');
-                        });
-                    }
-                    else if(!err && result.length > 0) {
-                        alert('a project with that name already exists');
-                    } else alert('there was an error');
-                });
-            }
-        });
-        $("#cancel").on('click', function() {
-            win.hide();
-        });
-    </script>
+    <script src="../js/add_project.js"></script>
   </body>
 </html>
