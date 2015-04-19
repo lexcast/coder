@@ -34,7 +34,8 @@ $("#add-project").on('click', function() {
             width: 200,
             height: 220,
             focus: true,
-            resizable: false
+            resizable: false,
+            show_in_taskbar: false
         });
         win_add.on('add', function() {
             win.reload();
@@ -43,4 +44,11 @@ $("#add-project").on('click', function() {
     else {
         win_add.show();
     }
+});
+
+win.on('close', function() {
+    this.hide();
+    if(win_add)
+        win_add.close();
+    this.close(true);
 });

@@ -16,7 +16,8 @@ $("#show-projects").on('click', function() {
             resizable: true,
             x: win.x + win.width + 20,
             y: win.y,
-            show: false
+            show: false,
+            show_in_taskbar: false
         });
     }
     else {
@@ -24,4 +25,11 @@ $("#show-projects").on('click', function() {
         win_projects = null;
     }
     $(this).toggleClass("selected");
+});
+
+win.on('close', function() {
+    this.hide();
+    if(win_projects)
+        win_projects.close();
+    this.close(true);
 });
