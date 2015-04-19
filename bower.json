@@ -1,0 +1,25 @@
+{
+  "name": "coder",
+  "version": "0.1",
+  "homepage": "https://github.com/lexcast/coder",
+  "authors": [
+    "Daniel Alejandro Cast <lexcast13@gmail.com>"
+  ],
+  "description": "Widget app to quick access your projects",
+  "keywords": [
+    "widget",
+    "projects"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "storedb": "~0.1.2"
+  }
+}
