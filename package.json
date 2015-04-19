@@ -1,19 +1,27 @@
 {
-    "main": "index.html",
-    "name": "coder",
-    "description": "Widget app to quick access your projects",
-    "version": "0.1",
-    "keywords": [ "widget", "project", "management" ],
-    "window": {
-        "title": "Coder",
-        "toolbar": false,
-        "frame": false,
-        "width": 200,
-        "height": 180,
-        "x": 180,
-        "y": 130,
-        "resizable": false,
-        "show_in_taskbar": false,
-        "transparent": true
-      }
+  "main": "index.html",
+  "name": "coder",
+  "description": "Widget app to quick access your projects",
+  "version": "0.1.0",
+  "keywords": [
+    "widget",
+    "project",
+    "management"
+  ],
+  "window": {
+    "title": "Coder",
+    "toolbar": false,
+    "frame": false,
+    "width": 200,
+    "height": 180,
+    "x": 180,
+    "y": 130,
+    "resizable": false,
+    "show_in_taskbar": false,
+    "transparent": true
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-bower": "^0.18.0"
+  }
 }
