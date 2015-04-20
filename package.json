@@ -24,6 +24,7 @@
     "show_in_taskbar": false,
     "transparent": true
   },
+  "chromium-args": "--enable-transparent-visuals --disable-gpu",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-bower": "^0.18.0",
