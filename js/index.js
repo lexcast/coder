@@ -4,6 +4,14 @@ var win = gui.Window.get();
 // win.showDevTools();
 var win_projects;
 
+var tray = new gui.Tray({ title: 'Coder', icon: './img/code-icon.png' });
+var menu = new gui.Menu();
+menu.append(new gui.MenuItem({ label: 'Close' }));
+menu.items[0].click = function() {
+    gui.App.closeAllWindows();
+};
+tray.menu = menu;
+
 $("#main-header").text(os.hostname());
 
 $("#show-projects").on('click', function() {
