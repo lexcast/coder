@@ -12,14 +12,15 @@ $("#add").on('click', function() {
                         if(!err) {
                             win.hide();
                             win.emit('add');
-                        } else alert('there was an error');
+                        } else error('there was an error');
                 });
             }
             else if(!err && result.length > 0) {
-                alert('a project with that name already exists');
-            } else alert('there was an error');
+                error('a project with that name already exists');
+            } else error('there was an error');
         });
     }
+    return false;
 });
 
 $("#cancel").on('click', function() {
