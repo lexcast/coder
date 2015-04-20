@@ -1,11 +1,15 @@
-body {
+html {
     -webkit-border-radius: 5px;
+}
+body {
     background-color: rgba(20, 17, 16, 0.9);
     font-family: ubuntu, arial;
+    margin: 0;
 }
 header {
     font-size: 16px;
     color: #FFF;
+    padding: 8px;
 }
 input {
     font-size: 14px;
