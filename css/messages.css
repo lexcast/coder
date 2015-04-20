@@ -1,0 +1,26 @@
+#message-container {
+    width: 100%;
+    position: fixed;
+    top: 35px;
+}
+.message {
+    color: #FFF;
+    width: 80%;
+    -webkit-border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+}
+.message span {
+    font-size: 20px;
+}
+.error {
+    background-color: rgba(213, 20, 20, 0.91);
+}
+.success {
+    background-color:rgba(25, 198, 48, 0.9);
+}
+.info {
+    background-color: rgba(20, 136, 186, 0.8);
+}
