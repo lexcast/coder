@@ -21,6 +21,13 @@ if(projects) {
     container.append("<p>no projects</p>");
 }
 
+container.on('click', '.project-container', function() {
+    win.hide();
+    global.openProject = this.id;
+    win.emit('open-project');
+    win.close();
+});
+
 win.show();
 
 $("#add-project").on('click', function() {
