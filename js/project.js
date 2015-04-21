@@ -1,11 +1,11 @@
 var gui = require('nw.gui');
 var win = gui.Window.get();
-win.showDevTools();
+// win.showDevTools();
 
 var project;
 storedb('projects').find({ "name": global.openProject }, function(err, result) {
     if(!err) {
-        project = result;
+        project = result[0];
     } else {
         error('there was an error');
     }
@@ -19,12 +19,12 @@ $("#project-path").prepend(' ~ ' + project.location);
 
 var img = document.createElement('img');
 img.setAttribute('src', project.icon);
-$("project-icon").prepend(img);
+$("#project-icon").prepend(img);
 
 $("#delete-project").on('click', function() {
     var sure = confirm('are you sure you want to delete this project?');
-    if(sure) {
-        storebd('projects').remove({ "name": project.name }, function(err) {
+    if(sure == true) {
+        storedb('projects').remove({ "name": project.name }, function(err) {
             if(!err){
                 win.close();
             } else {
