@@ -1,0 +1,64 @@
+html {
+    -webkit-border-radius: 5px;
+}
+body {
+    background-color: rgba(20, 17, 16, 0.9);
+    font-family: ubuntu, arial;
+    margin: 0;
+}
+header {
+    height: 30px;text-overflow: ellipsis;
+}
+#project-name {
+    color: #FFF;
+    font-size: 16px;
+    padding: 5px 10px 0;
+    float: left;
+}
+#project-path {
+    color: #91989e;
+    font-size: 14px;
+    padding: 5px 12px 0;
+    float: left;
+}
+.main {
+    height: 150px;
+    border-bottom: 1px solid #1781ae;
+    clear: both;
+}
+#project-icon {
+    float: left;
+    width: 80px;
+    height: 100%;
+}
+#project-icon img {
+    max-width: 80px;
+    max-height: 80px;
+    margin: 5px auto 0;
+}
+#project-options {
+    height: 100%;
+    float: left;
+}
+#project-shortcuts {
+    height: 70%;
+}
+#project-actions {
+    height: 30%;
+}
+.btn {
+    background-color: #117e99;
+    -webkit-border-radius: 3px;
+    color: #FFF;
+    height: 16px;
+    padding: 3px;
+    border: none;
+    min-width: 60px;
+    text-align: center;
+    font-size: 14px;
+    -webkit-user-select: none;
+    cursor: default;
+}
+#delete-project {
+    background-color: #de2111;
+}
