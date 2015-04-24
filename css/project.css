@@ -30,11 +30,15 @@ header {
     float: left;
     width: 80px;
     height: 100%;
+    padding-left:5px;
 }
 #project-icon img {
     max-width: 80px;
     max-height: 80px;
     margin: 5px auto 0;
+}
+#project-icon img:hover {
+    outline: 2px solid #0d86ba;
 }
 #project-options {
     height: 100%;
@@ -60,5 +64,34 @@ header {
     cursor: default;
 }
 #delete-project {
+    background-color: #560301;
+}
+#delete-project:hover {
     background-color: #de2111;
+}
+#project-path .fa:hover {
+    color: #0d86ba;
+}
+#project-name .content {
+    padding: 2px;
+    display: inline-block;
+}
+#project-name .content[contenteditable="true"] {
+    color: #0d86ba;
+    -webkit-border-radius: 3px;
+    background-color: #303434;
+    outline: none;
+    min-width: 50px;
+}
+#project-name span {
+    padding-left: 3px;
+}
+#project-name .fa-pencil:hover {
+    color: #0d86ba;
+}
+#project-name .fa-check:hover {
+    color: #25bd41;
+}
+.hidden {
+    display: none;
 }

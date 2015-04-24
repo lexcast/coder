@@ -62,5 +62,7 @@ win.on('close', function() {
     this.hide();
     if(win_projects)
         win_projects.close();
+    if(win_project)
+        win_project.close();
     this.close(true);
 });
