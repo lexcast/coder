@@ -20,6 +20,9 @@ $("#add").on('click', function() {
             } else error('there was an error');
         });
     }
+    else {
+        info('fill correctly the form');
+    }
     return false;
 });
 

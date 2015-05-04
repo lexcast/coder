@@ -51,7 +51,7 @@ header {
     height: 30%;
 }
 .btn {
-    background-color: #117e99;
+    background-color: #095e66;
     -webkit-border-radius: 3px;
     color: #FFF;
     height: 16px;
@@ -62,9 +62,14 @@ header {
     font-size: 14px;
     -webkit-user-select: none;
     cursor: default;
+    float: left;
+}
+.btn:hover {
+    background-color: #117e99;
 }
 #delete-project {
     background-color: #560301;
+    width: 55px;
 }
 #delete-project:hover {
     background-color: #de2111;

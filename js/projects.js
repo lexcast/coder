@@ -46,6 +46,8 @@ $("#add-project").on('click', function() {
         });
         win_add.on('add', function() {
             win.reload();
+            // refresh projects list
+            // success('project created')
         });
     }
     else {
