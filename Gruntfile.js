@@ -5,7 +5,17 @@ grunt.initConfig({
         dev: {
             dest: 'vendor/',
             options: {
-                expand: true
+                expand: true,
+                packageSpecific: {
+                    'devicon': {
+                        files: [
+                            "fonts/*",
+                            "devicon.css",
+                            "devicon.json",
+                            "!gulpfile.js"
+                        ]
+                    }
+                }
             }
         }
     },
