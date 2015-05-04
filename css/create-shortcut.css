@@ -1,0 +1,134 @@
+html {
+    -webkit-border-radius: 5px;
+}
+body {
+    background-color: rgba(20, 17, 16, 0.9);
+    font-family: ubuntu, arial;
+    margin: 0;
+}
+header {
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px;
+}
+input {
+    font-size: 14px;
+}
+input[type="text"],
+textarea {
+    margin: 8px auto;
+    background-color: rgba(44, 46, 49, 0.87);
+    color: #10788d;
+    border: 1px solid #021116;
+    width: 80%;
+    -webkit-border-radius: 3px;
+    height: 25px;
+}
+input[type="text"]:focus,
+textarea:focus {
+    border: 1px solid #117e99;
+    outline: none;
+}
+input[type="submit"] {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+input[type="submit"],
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #117e99;
+    -webkit-border-radius: 3px;
+    color: #FFF;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    min-width: 60px
+}
+#cancel {
+    background-color: #ea2c0b;
+}
+input[type="file"] {
+    width: 80%;
+    background-color: rgba(44, 46, 49, 0.87);
+    color: #FFF;
+    margin: 2px auto;
+}
+form label {
+    color: #FFF;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.shortcut-form {
+    text-align: center;
+}
+.icons-selector * .fa {
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.icons-selector * [class^="devicon-"],
+.icons-selector * [class*=" devicon-"] {
+	font-family: 'devicon';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+.selector-popup {
+    width: 160px !important;
+    margin-left: -50px;
+    background-color: rgba(175, 177, 174, 0.69) !important;
+    -webkit-border-radius: 3px;
+}
+.selected-icon {
+    color: #10788d !important;
+    -webkit-border-radius: 3px 0 0 3px;
+    border: solid 1px #303030;
+    width: 40px !important;
+    height: 25px !important;
+    padding-bottom: 10px !important;
+}
+.selected-icon i {
+    font-size: 24px !important;
+}
+.selector-button {
+    height: 25px !important;
+    width: 25px !important;
+    padding-bottom: 10px !important;
+    -webkit-border-radius: 0 3px 3px 0;
+    border: solid 1px #303030;
+    background-color: #303030;
+    color: #FFF;
+}
+.selector {
+    width: initial !important;
+    margin-top: 5px;
+}
+.panel-right,
+.panel-left {
+    float: left;
+}
+.panel-right {
+    padding: 0;
+    width: 200px;
+    text-align: left;
+}
+.panel-left {
+    width: 185px;
+}
+.selector-search .icons-search-input {
+    margin: 0;
+}
+.icon-label {
+    margin-right: 5px;
+}
+.fip-box {
+    width: 30px !important;
+    margin: 2px !important;
+    line-height: initial !important;
+    height: initial !important;
+}
+.fip-box:hover {
+    color: #10788d;
+}
+textarea {
+    height: 60px !important;
+    width: 100% !important;
+}

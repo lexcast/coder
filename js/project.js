@@ -1,7 +1,7 @@
 var gui = require('nw.gui');
 var win = gui.Window.get();
 // win.showDevTools();
-
+var win_create_shortcut;
 var nameText = $("#project-name .content");
 var pathText = $("#project-path .content");
 var project;
@@ -139,4 +139,36 @@ $("#icon").on('change', function() {
                 }
         );
     }
+});
+
+$("#create-shortcut").on('click', function() {
+    if(!win_create_shortcut) {
+        win_create_shortcut = gui.Window.open('create-shortcut.html',
+        {
+            toolbar: false,
+            frame: false,
+            position: "center",
+            transparent: true,
+            width: 400,
+            height: 220,
+            focus: true,
+            resizable: false,
+            show_in_taskbar: false
+        });
+        win_create_shortcut.on('create', function() {
+            // win.reload();
+            // refresh shortcuts list
+            success('shortcut created');
+        });
+    }
+    else {
+        win_create_shortcut.show();
+    }
+});
+
+win.on('close', function() {
+    this.hide();
+    if(win_create_shortcut)
+        win_create_shortcut.close();
+    this.close(true);
 });

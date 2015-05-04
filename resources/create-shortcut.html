@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add new shortcut</title>
+    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../vendor/devicon/devicon.css">
+    <link rel="stylesheet" href="../vendor/fontIconPicker/css/jquery.fonticonpicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/create-shortcut.css">
+    <link rel="stylesheet" type="text/css" href="../css/messages.css">
+</head>
+<body>
+    <header>New shortcut</header>
+    <div class="shortcut-form">
+        <form id="form" autocomplete="off">
+            <div class="panel-left">
+                <input type="text" id="name" placeholder="Name" required>
+                </br>
+                <label class="icon-label">Icon</label>
+                <select id="icon"></select>
+            </div>
+            <div class="panel-right">
+                <textarea id="action" placeholder="Command to execute" required></textarea>
+                </br>
+                <input type="checkbox" id="terminal"><label>Open terminal</label>
+                </br>
+                <input type="checkbox" id="path"><label>Execute from the project path</label>
+                </br>
+            </div>
+            <input type="submit" value="Add" id="add">
+            <input type="submit" formnovalidate value="Cancel" id="cancel">
+        </form>
+    </div>
+    <script src="../vendor/jquery/dist/jquery.js"></script>
+    <script src="../vendor/storedb/storedb.js"></script>
+    <script src="../vendor/fontIconPicker/jquery.fonticonpicker.min.js"></script>
+    <script src="../js/messages.js"></script>
+    <script src="../js/create-shortcut.js"></script>
+</body>
+</html>
